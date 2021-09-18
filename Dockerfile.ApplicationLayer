@@ -1,0 +1,7 @@
+FROM python:3.8-slim
+
+RUN pip install pex
+
+COPY ./dist/app_layer .
+
+CMD ["./pex_binary.pex"]
